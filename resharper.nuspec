@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Bootstrap3.LiveTemplates</id>
+        <version>1.0.0</version>
+        <title>Bootstrap 3 Live Templates</title>
+        <authors>Oleg Shevchenko</authors>
+        <owners>Oleg Shevchenko</owners>
+        <licenseUrl>https://github.com/olsh/resharper-bootstrap-templates/raw/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/olsh/resharper-bootstrap-templates</projectUrl>
+        <iconUrl>https://github.com/olsh/resharper-bootstrap-templates/raw/master/logo.png</iconUrl>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <description>Bootstrap 3 Live Templates for quick markup generation</description>
+        <language>en-US</language>
+        <tags>resharper bootstrap3 templates</tags>
+        <dependencies>
+            <dependency id="Wave" version="1.0" />
+        </dependencies>
+    </metadata>
+    <files>
+      <file src="src\bs3\templates.dotSettings" target="DotFiles\Extensions\Bootstrap3.LiveTemplates\settings" />
+    </files>    
+</package>
