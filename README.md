@@ -10,3 +10,4 @@ You can find the full list of the templates in `ReSharper -> Tools -> Templates 
 ##Installation
 
 Look for `Bootstrap 3 Live Templates` in `ReSharper -> Extension manager`.
+[ReSharper Gallery](https://resharper-plugins.jetbrains.com/packages/Bootstrap3.LiveTemplates/)
