@@ -9,7 +9,6 @@
         <licenseUrl>https://github.com/olsh/resharper-bootstrap-templates/raw/master/LICENSE</licenseUrl>
         <projectUrl>https://github.com/olsh/resharper-bootstrap-templates</projectUrl>
         <iconUrl>https://raw.githubusercontent.com/olsh/resharper-bootstrap-templates/master/images/bootstrap3-logo.png</iconUrl>
-        <requireLicenseAcceptance>true</requireLicenseAcceptance>
         <description>Bootstrap 3 Live Templates for quick markup generation</description>
         <language>en-US</language>
         <tags>resharper bootstrap3 templates</tags>
