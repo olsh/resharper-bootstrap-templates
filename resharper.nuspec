@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>Bootstrap3.LiveTemplates</id>
-        <version>1.2.0</version>
+        <version>1.3.0</version>
         <title>Bootstrap 3 Live Templates</title>
         <authors>Oleg Shevchenko</authors>
         <owners>Oleg Shevchenko</owners>
@@ -13,7 +13,7 @@
         <language>en-US</language>
         <tags>resharper bootstrap3 templates</tags>
         <dependencies>
-            <dependency id="Wave" version="[5.0]" />
+            <dependency id="Wave" version="[6.0]" />
         </dependencies>
     </metadata>
     <files>
