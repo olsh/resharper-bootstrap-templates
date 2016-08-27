@@ -11,7 +11,7 @@ class-expression: list("alert-info,alert-success,alert-warning,alert-danger,")
 
 # bs3-alert-dismissible
 
-Bootstrap 3 alert dismissible
+Dismissible alert
 
 ```
 <div class="alert $class$ alert-dismissible">

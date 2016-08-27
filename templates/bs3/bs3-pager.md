@@ -9,7 +9,7 @@ scopes: InHtmlLikeFile
 
 # bs3-pager
 
-
+Pager
 
 ```
 <ul class="pager">

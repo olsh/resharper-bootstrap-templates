@@ -9,7 +9,7 @@ scopes: InHtmlLikeFile
 
 # bs3-clearfix
 
-
+Clearfix
 
 ```
 <div class="clearfix">

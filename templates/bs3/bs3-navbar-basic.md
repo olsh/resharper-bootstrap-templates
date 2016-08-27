@@ -14,7 +14,7 @@ link-expression: constant("Link")
 
 # bs3-navbar-basic
 
-
+Navbar basic
 
 ```
 <div class="navbar $inverse$">

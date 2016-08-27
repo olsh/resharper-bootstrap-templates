@@ -11,7 +11,7 @@ id-expression: constant("id")
 
 # bs3-input-select-h
 
-
+Select horizontal form
 
 ```
 <div class="form-group">

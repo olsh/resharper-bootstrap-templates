@@ -12,7 +12,7 @@ tab-expression: constant("tab")
 
 # bs3-tabs
 
-
+Tabs
 
 ```
 <div role="tabpanel">

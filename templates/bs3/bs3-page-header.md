@@ -12,7 +12,7 @@ subtext-expression: constant("subtext")
 
 # bs3-page-header
 
-
+Page header
 
 ```
 <div class="page-header">

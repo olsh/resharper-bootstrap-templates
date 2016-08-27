@@ -9,7 +9,7 @@ scopes: InHtmlLikeFile
 
 # bs3-pager-aligned
 
-
+Pager aligned
 
 ```
 <ul class="pager">

@@ -12,7 +12,7 @@ class-expression: constant("col-sm-2")
 
 # bs3-input-label
 
-
+Input label
 
 ```
 <label for="$id$" class="$class$">$text$</label>

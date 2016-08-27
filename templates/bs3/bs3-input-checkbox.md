@@ -11,7 +11,7 @@ text-expression: constant("Checkbox")
 
 # bs3-input-checkbox
 
-
+Checkbox
 
 ```
 <div class="checkbox">

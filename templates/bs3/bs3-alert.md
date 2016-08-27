@@ -11,7 +11,7 @@ class-expression: list("alert-info,alert-success,alert-warning,alert-danger,")
 
 # bs3-alert
 
-Bootstrap 3 alert
+Alert
 
 ```
 <div class="alert $class$">

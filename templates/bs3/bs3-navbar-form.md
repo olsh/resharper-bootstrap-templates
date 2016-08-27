@@ -13,7 +13,7 @@ submit-expression: constant("Submit")
 
 # bs3-navbar-form
 
-
+Navbar form
 
 ```
 <form class="navbar-form pull-$position$">

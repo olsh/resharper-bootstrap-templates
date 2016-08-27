@@ -13,7 +13,7 @@ text-expression: constant("text")
 
 # bs3-panel
 
-
+Panel
 
 ```
 <div class="panel panel-$type$">

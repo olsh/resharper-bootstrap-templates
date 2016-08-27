@@ -15,7 +15,7 @@ link-expression: constant("Link")
 
 # bs3-navbar-fixed
 
-
+Navbar fixed
 
 ```
 <nav class="navbar navbar-default navbar-fixed-$position$" role="navigation">

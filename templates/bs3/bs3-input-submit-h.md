@@ -10,7 +10,7 @@ parameterOrder: text
 
 # bs3-input-submit-h
 
-
+Submit button horizontal form
 
 ```
 <div class="form-group">

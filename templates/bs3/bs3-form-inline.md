@@ -13,7 +13,7 @@ submit-expression: constant("Submit")
 
 # bs3-form-inline
 
-
+Inline form
 
 ```
 <form action="$action$" method="$method$" class="form-inline" role="form">

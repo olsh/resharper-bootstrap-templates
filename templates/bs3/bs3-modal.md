@@ -14,7 +14,7 @@ save-expression: constant("Save")
 
 # bs3-modal
 
-
+Modal dialog
 
 ```
 <a class="btn btn-primary" data-toggle="modal" href="#$id$">Trigger modal</a>

@@ -13,7 +13,7 @@ hover-expression: constant("table-hover")
 
 # bs3-table-responsive
 
-
+Responsive table
 
 ```
 <div class="table-responsive">

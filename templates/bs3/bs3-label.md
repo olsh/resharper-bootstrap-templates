@@ -12,7 +12,7 @@ text-expression: constant("text")
 
 # bs3-label
 
-
+Label
 
 ```
 <span class="label $class$">$text$</span>

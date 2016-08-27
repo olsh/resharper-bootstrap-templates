@@ -12,7 +12,7 @@ title-expression: constant("Title")
 
 # bs3-navbar
 
-
+Navbar
 
 ```
 <nav class="navbar navbar-default" role="navigation">

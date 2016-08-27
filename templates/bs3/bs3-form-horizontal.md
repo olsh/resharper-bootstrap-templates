@@ -14,7 +14,7 @@ submit-expression: constant("Submit")
 
 # bs3-form-horizontal
 
-
+Horizontal form
 
 ```
 <form action="$action$" method="$method$" class="form-horizontal" role="form">

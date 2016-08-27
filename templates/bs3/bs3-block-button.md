@@ -13,7 +13,7 @@ text-expression: constant("button")
 
 # bs3-block-button
 
-
+Block button
 
 ```
 <button type="button" class="btn btn-$size$ btn-$class$ btn-block">$text$</button>

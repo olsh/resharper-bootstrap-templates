@@ -15,7 +15,7 @@ type-expression: list("color,date,email,hidden,month,number,password,range,searc
 
 # bs3-input-h
 
-
+Input horizontal form
 
 ```
 <div class="form-group">

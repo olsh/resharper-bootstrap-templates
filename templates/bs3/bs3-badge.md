@@ -11,7 +11,7 @@ text-expression: constant("Badge")
 
 # bs3-badge
 
-
+Badge
 
 ```
 <span class="badge">$text$</span>

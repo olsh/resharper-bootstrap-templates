@@ -11,7 +11,7 @@ type-expression: list("danger,info,primary,success,warning,default")
 
 # bs3-panel-footer
 
-
+Panel with footer
 
 ```
 <div class="panel panel-$type$">    

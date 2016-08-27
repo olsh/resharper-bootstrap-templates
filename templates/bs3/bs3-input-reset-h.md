@@ -10,7 +10,7 @@ parameterOrder: value
 
 # bs3-input-reset-h
 
-
+Reset button horizontal form
 
 ```
 <div class="form-group">

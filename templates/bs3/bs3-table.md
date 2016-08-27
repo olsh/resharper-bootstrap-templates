@@ -13,7 +13,7 @@ hover-expression: constant("table-hover")
 
 # bs3-table
 
-
+Table
 
 ```
 <table class="table $condensed$ $stripped$ $hover$">

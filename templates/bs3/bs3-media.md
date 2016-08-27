@@ -15,7 +15,7 @@ text-expression: constant("Text goes here...")
 
 # bs3-media
 
-
+Media object
 
 ```
 <div class="media">

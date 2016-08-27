@@ -11,7 +11,7 @@ value-expression: constant("Reset")
 
 # bs3-input-reset
 
-
+Reset button
 
 ```
 <input type="reset" value="$value$" class="btn btn-default">

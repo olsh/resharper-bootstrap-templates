@@ -11,7 +11,7 @@ id-expression: constant("carousel-id")
 
 # bs3-carousel
 
-
+Carousel
 
 ```
 <div id="$id$" class="carousel slide" data-ride="carousel">

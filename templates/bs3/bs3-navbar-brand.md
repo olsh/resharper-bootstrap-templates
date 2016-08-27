@@ -12,7 +12,7 @@ title-expression: constant("Title")
 
 # bs3-navbar-brand
 
-
+Brand link
 
 ```
 <a class="navbar-brand" href="$href$">$title$</a>

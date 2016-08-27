@@ -12,7 +12,7 @@ required-expression: constant("required")
 
 # bs3-textarea
 
-
+Textarea
 
 ```
 <textarea name="$name$" id="$id$" class="form-control" rows="$row$" $required$>$END$</textarea>

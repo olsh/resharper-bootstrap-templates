@@ -9,7 +9,7 @@ scopes: InHtmlLikeFile
 
 # bs3-list-group-linked
 
-
+List group linked
 
 ```
 <div class="list-group">

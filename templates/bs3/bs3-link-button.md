@@ -14,7 +14,7 @@ text-expression: constant("text")
 
 # bs3-link-button
 
-
+Link button
 
 ```
 <a class="btn btn-$size$ btn-$class$" href="$href$" role="button">$text$</a>

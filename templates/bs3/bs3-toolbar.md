@@ -9,7 +9,7 @@ scopes: InHtmlLikeFile
 
 # bs3-toolbar
 
-
+Toolbar
 
 ```
 <div class="btn-toolbar">

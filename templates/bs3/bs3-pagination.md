@@ -11,7 +11,7 @@ size-expression: list("pagination-sm,pagination-lg,")
 
 # bs3-pagination
 
-
+Pagination
 
 ```
 <ul class="pagination $size$">
