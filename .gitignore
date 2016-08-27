@@ -249,3 +249,4 @@ paket-files/
 *.sln.iml
 
 !bin/
+templates.dotSettings
