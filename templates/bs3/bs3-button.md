@@ -5,9 +5,9 @@ reformat: True
 shortenReferences: True
 categories: bootstrap 3
 scopes: InHtmlLikeFile
-parameterOrder: size, classs, text
+parameterOrder: size, class, text
 size-expression: list("lg,sm,xs")
-classs-expression: list("default,primary,success,warning,danger")
+class-expression: list("default,primary,success,warning,danger")
 text-expression: constant("button")
 ---
 
@@ -16,5 +16,5 @@ text-expression: constant("button")
 
 
 ```
-<button type="button" class="btn btn-$size$ btn-$classs$">$text$</button>
+<button type="button" class="btn btn-$size$ btn-$class$">$text$</button>
 ```

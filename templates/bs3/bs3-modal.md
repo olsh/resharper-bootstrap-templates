@@ -5,7 +5,11 @@ reformat: True
 shortenReferences: True
 categories: bootstrap 3
 scopes: InHtmlLikeFile
-parameterOrder: modal
+parameterOrder: id, title, close, save
+id-expression: constant("id")
+title-expression: constant("Modal title")
+close-expression: constant("Close")
+save-expression: constant("Save")
 ---
 
 # bs3-modal
@@ -13,8 +17,8 @@ parameterOrder: modal
 
 
 ```
-<a class="btn btn-primary" data-toggle="modal" href="#$modal_id$">Trigger modal</a>
-<div class="modal fade" id="$modal_id$">
+<a class="btn btn-primary" data-toggle="modal" href="#$id$">Trigger modal</a>
+<div class="modal fade" id="$id$">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">

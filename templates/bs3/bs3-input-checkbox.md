@@ -6,7 +6,6 @@ shortenReferences: True
 categories: bootstrap 3
 scopes: InHtmlLikeFile
 parameterOrder: value, text
-value-expression: constant("")
 text-expression: constant("Checkbox")
 ---
 

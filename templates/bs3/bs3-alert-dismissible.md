@@ -1,5 +1,5 @@
 ---
-guid: 6adc6f59-d865-4aca-8c9f-b9973ff57ae6
+guid: 1dd63e29-f13d-42fe-b958-5ae99f3f3e59
 type: Live
 reformat: True
 shortenReferences: True
@@ -9,12 +9,13 @@ parameterOrder: class, title, body
 class-expression: list("alert-info,alert-success,alert-warning,alert-danger,")
 ---
 
-# bs3-alert
+# bs3-alert-dismissible
 
-Bootstrap 3 alert
+Bootstrap 3 alert dismissible
 
 ```
-<div class="alert $class$">
+<div class="alert $class$ alert-dismissible">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
     <strong>$title$</strong> $body$
 </div>
 ```

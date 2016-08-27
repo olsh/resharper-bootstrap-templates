@@ -6,10 +6,8 @@ shortenReferences: True
 categories: bootstrap 3
 scopes: InHtmlLikeFile
 parameterOrder: name, id, row, required
-name-expression: constant("name")
-id-expression: constant("id")
 row-expression: constant("3")
-required-expression: constant("required=
+required-expression: constant("required")
 ---
 
 # bs3-textarea

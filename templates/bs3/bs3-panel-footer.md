@@ -5,7 +5,8 @@ reformat: True
 shortenReferences: True
 categories: bootstrap 3
 scopes: InHtmlLikeFile
-parameterOrder: footer
+parameterOrder: type, text, footerText
+type-expression: list("danger,info,primary,success,warning,default")
 ---
 
 # bs3-panel-footer
@@ -17,6 +18,6 @@ parameterOrder: footer
     <div class="panel-body">
         $text$
     </div>
-    <div class="panel-footer">$footer_text$</div>
+    <div class="panel-footer">$footerText$</div>
 </div>
 ```

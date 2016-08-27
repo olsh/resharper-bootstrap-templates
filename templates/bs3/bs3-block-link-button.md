@@ -6,6 +6,8 @@ shortenReferences: True
 categories: bootstrap 3
 scopes: InHtmlLikeFile
 parameterOrder: size, text, class, href
+size-expression: list("lg,sm,xs")
+class-expression: list("default,primary,success,warning,danger")
 ---
 
 # bs3-block-link-button

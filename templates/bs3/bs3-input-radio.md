@@ -9,7 +9,7 @@ parameterOrder: name, id, value, checked, text
 name-expression: constant("name")
 id-expression: constant("id")
 value-expression: constant("value")
-checked-expression: constant("checked=
+checked-expression: constant("checked")
 text-expression: constant("Radio Box")
 ---
 

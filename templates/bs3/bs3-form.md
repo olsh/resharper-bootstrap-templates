@@ -5,11 +5,11 @@ reformat: True
 shortenReferences: True
 categories: bootstrap 3
 scopes: InHtmlLikeFile
-parameterOrder: action, method, title, lable, submit
+parameterOrder: action, method, title, label, submit
 action-expression: constant("")
 method-expression: constant("POST")
 title-expression: constant("Form title")
-lable-expression: constant("lable")
+label-expression: constant("label")
 submit-expression: constant("Submit")
 ---
 
@@ -21,7 +21,7 @@ submit-expression: constant("Submit")
 <form action="$action$" method="$method$" role="form">
     <legend>$title$</legend>
     <div class="form-group">
-        <label for="">$lable$</label>
+        <label for="">$label$</label>
         <input type="text" class="form-control" id="" placeholder="Input field">
     </div>
     $END$

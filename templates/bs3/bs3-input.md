@@ -10,7 +10,7 @@ type-expression: list("color,date,email,hidden,month,number,password,range,searc
 name-expression: constant("name")
 id-expression: constant("id")
 value-expression: constant("value")
-required-expression: constant("required=
+required-expression: constant("required")
 ---
 
 # bs3-input

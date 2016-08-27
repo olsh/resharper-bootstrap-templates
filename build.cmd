@@ -9,7 +9,7 @@ if not "%PackageVersion%" == "" (
    set version=%PackageVersion%
 )
 
-bin\rstc.exe compile -i templates\bs3\*.md -o templates\bs3\templates.dotSettings
+bin\rstc.exe compile -i templates\bs3\*.md -o templates\bs3\templates.dotSettings -r TemplatesList.md
 
 nuget restore src\Resharper.BootstrapTemplates.sln
 

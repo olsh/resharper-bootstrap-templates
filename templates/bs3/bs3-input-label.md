@@ -5,7 +5,9 @@ reformat: True
 shortenReferences: True
 categories: bootstrap 3
 scopes: InHtmlLikeFile
-parameterOrder: input
+parameterOrder: id, class, text
+id-expression: constant("id")
+class-expression: constant("col-sm-2")
 ---
 
 # bs3-input-label
@@ -13,5 +15,5 @@ parameterOrder: input
 
 
 ```
-<label for="$input_id$" class="$class$">$text$</label>
+<label for="$id$" class="$class$">$text$</label>
 ```
