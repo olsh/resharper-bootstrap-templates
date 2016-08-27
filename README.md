@@ -5,7 +5,7 @@ Just type `bs` and press `alt + space`, see the demo
 
 ![Demo](https://github.com/olsh/resharper-bootstrap-templates/raw/master/images/demo.gif)
 
-You can find the full list of the templates in `ReSharper -> Tools -> Templates Explorer`.
+You can find the full list of the templates [here](templates/bs3/) or in `ReSharper -> Tools -> Templates Explorer`.
 
 ##Installation
 
