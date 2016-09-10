@@ -11,7 +11,7 @@ id-expression: constant("accordion-id")
 
 # bs4-accordion
 
-Clearfix
+Accordion
 
 ```
 <div id="$id$" role="tablist" aria-multiselectable="true">

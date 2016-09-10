@@ -5,7 +5,7 @@ reformat: True
 shortenReferences: True
 categories: bootstrap 3
 scopes: InHtmlLikeFile
-parameterOrder: value, text
+parameterOrder: text
 text-expression: constant("Checkbox")
 ---
 
@@ -16,7 +16,7 @@ Checkbox
 ```
 <div class="checkbox">
     <label>
-        <input type="checkbox" value="$value$">
+        <input type="checkbox" value="">
         $text$
     </label>
 </div>

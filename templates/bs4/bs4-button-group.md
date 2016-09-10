@@ -12,7 +12,7 @@ group-expression: list("btn-group,btn-group-vertical")
 
 # bs4-button-group
 
-Button
+Button group
 
 ```
 <div class="btn-group" role="group" aria-label="Basic example">

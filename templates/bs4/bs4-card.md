@@ -14,7 +14,7 @@ src-expression: constant("")
 
 # bs4-card
 
-Carousel
+Card
 
 ```
 <div class="card">

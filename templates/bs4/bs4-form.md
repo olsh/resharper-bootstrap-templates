@@ -1,5 +1,5 @@
 ---
-guid: a2068ec5-1728-4754-99e1-d9a1f632d0d6
+guid: 296560df-92ed-4e37-9120-dace51ddffaf
 type: Live
 reformat: True
 shortenReferences: True
@@ -20,7 +20,7 @@ Form
 ```
 <form action="$action$" method="$method$" role="form">
     <legend>$title$</legend>
-    <div class="form-group">
+    <div class="form-control">
         <label for="">$label$</label>
         <input type="text" class="form-control" id="" placeholder="Input field">
     </div>
