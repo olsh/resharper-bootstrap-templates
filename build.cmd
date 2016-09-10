@@ -1,5 +1,10 @@
 @echo off
-set config=%1
+set bsver=%1
+if "%bsver%" == "" (
+   set bsver=3
+)
+
+set config=%2
 if "%config%" == "" (
    set config=Release
 )
@@ -9,10 +14,10 @@ if not "%PackageVersion%" == "" (
    set version=%PackageVersion%
 )
 
-bin\rstc.exe compile -i templates\bs3\*.md -o templates\bs3\templates.dotSettings -r templates\bs3\README.md
+rstc\rstc.exe compile -i templates\bs%bsver%\*.md -o templates\bs%bsver%\templates.dotSettings -r templates\bs%bsver%\README.md
 
 nuget restore src\Resharper.BootstrapTemplates.sln
 
 "%ProgramFiles(x86)%\MSBuild\14.0\Bin\msbuild" src\Resharper.BootstrapTemplates.sln /t:Rebuild /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=Normal /nr:false
 
-nuget pack resharper.nuspec -NoPackageAnalysis -Version %version% -Properties "Configuration=%config%;ReSharperDep=Wave;ReSharperVer=[6.0]"
+nuget pack resharper.nuspec -NoPackageAnalysis -Version %version% -Properties "Configuration=%config%;ReSharperDep=Wave;ReSharperVer=[6.0];BsVer=%bsver%"

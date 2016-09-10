@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resharper.BootstrapTemplates", "Resharper.BootstrapTemplates.csproj", "{4611EC73-1821-4BB0-99E5-66AC14C0D410}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resharper.Bootstrap3.Templates", "Resharper.Bootstrap3.Templates\Resharper.Bootstrap3.Templates.csproj", "{B1B2441D-DA96-4B84-B9FA-5017B2442205}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resharper.Bootstrap4.Templates", "Resharper.Bootstrap4.Templates\Resharper.Bootstrap4.Templates.csproj", "{C8EAF09B-F10B-486C-98B3-71E62C7B4650}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4611EC73-1821-4BB0-99E5-66AC14C0D410}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4611EC73-1821-4BB0-99E5-66AC14C0D410}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4611EC73-1821-4BB0-99E5-66AC14C0D410}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4611EC73-1821-4BB0-99E5-66AC14C0D410}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1B2441D-DA96-4B84-B9FA-5017B2442205}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1B2441D-DA96-4B84-B9FA-5017B2442205}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1B2441D-DA96-4B84-B9FA-5017B2442205}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1B2441D-DA96-4B84-B9FA-5017B2442205}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8EAF09B-F10B-486C-98B3-71E62C7B4650}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8EAF09B-F10B-486C-98B3-71E62C7B4650}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8EAF09B-F10B-486C-98B3-71E62C7B4650}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8EAF09B-F10B-486C-98B3-71E62C7B4650}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
