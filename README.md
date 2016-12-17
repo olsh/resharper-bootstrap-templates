@@ -1,5 +1,7 @@
 #Bootstrap Live Templates for ReSharper
 
+[![Build status](https://ci.appveyor.com/api/projects/status/46d3wvd5mbw4p48x?svg=true)](https://ci.appveyor.com/project/olsh/resharper-bootstrap-templates)
+
 This extension provides live templates(snippets) for Bootstrap that let you generate Bootstrap blocks quickly.  
 Just type `bs` and press `alt + space`, see the demo
 
