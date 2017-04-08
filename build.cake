@@ -4,7 +4,7 @@
 var target = Argument("target", "Default");
 var bootstrapVersion = Argument("bootstrap", "3");
 var buildConfiguration = Argument("buildConfig", "Debug");
-var extensionsVersion = Argument("version", "2017.1.0");
+var extensionsVersion = Argument("version", "2017.1.1");
 var waveVersion = Argument("wave", "[8.0]");
 
 Task("AppendBuildNumber")
@@ -16,10 +16,11 @@ Task("AppendBuildNumber")
 });
 
 Task("UpdateBuildVersion")
+  .IsDependentOn("AppendBuildNumber")
   .WithCriteria(BuildSystem.AppVeyor.IsRunningOnAppVeyor)
   .Does(() =>
 {
-	BuildSystem.AppVeyor.UpdateBuildVersion(string.Format("{0}.{{build}}", extensionsVersion));
+	BuildSystem.AppVeyor.UpdateBuildVersion(extensionsVersion);
 });
 
 Task("CompileTemplates")
@@ -30,7 +31,7 @@ Task("CompileTemplates")
 			bootstrapVersion));
 
 	if (exitCodeWithArgument != 0) 
-    {
+	{
 		throw new Exception(string.Format("Template compilation fail. Code {0}", exitCodeWithArgument));
 	}
 });
