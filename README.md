@@ -1,4 +1,4 @@
-#Bootstrap Live Templates for ReSharper
+# Bootstrap Live Templates for ReSharper
 
 [![Build status](https://ci.appveyor.com/api/projects/status/46d3wvd5mbw4p48x?svg=true)](https://ci.appveyor.com/project/olsh/resharper-bootstrap-templates)
 
@@ -9,7 +9,7 @@ Just type `bs` and press `alt + space`, see the demo
 
 You can find the full list of the templates here [Bootstrap 3](templates/bs3/) and [Bootstrap 4](templates/bs4/) or in `ReSharper -> Tools -> Templates Explorer`.
 
-##Installation
+## Installation
 
 Look for `Bootstrap Live Templates` in `ReSharper -> Extension manager`.  
 
