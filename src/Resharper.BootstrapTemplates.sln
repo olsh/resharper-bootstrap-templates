@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resharper.Bootstrap3.Templa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resharper.Bootstrap4.Templates", "Resharper.Bootstrap4.Templates\Resharper.Bootstrap4.Templates.csproj", "{C8EAF09B-F10B-486C-98B3-71E62C7B4650}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{C61818CE-4EA9-4221-A083-09EEF31B2C3D}"
+	ProjectSection(SolutionItems) = preProject
+		..\build.cake = ..\build.cake
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

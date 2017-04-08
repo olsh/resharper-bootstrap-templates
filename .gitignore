@@ -250,3 +250,6 @@ paket-files/
 
 !rstc/
 templates.dotSettings
+
+tools/*
+!tools/packages.config
