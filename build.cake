@@ -4,7 +4,7 @@
 var target = Argument("target", "Default");
 var bootstrapVersion = Argument("bootstrap", "3");
 var buildConfiguration = Argument("buildConfig", "Debug");
-var extensionsVersion = Argument("version", "2017.1.1");
+var extensionsVersion = Argument("version", "2017.1.2");
 var waveVersion = Argument("wave", "[8.0]");
 
 Task("AppendBuildNumber")
@@ -104,7 +104,8 @@ Task("NugetPack")
                                      NoPackageAnalysis       = true,
                                      Files                   = files,
                                      OutputDirectory         = ".",
-									 Dependencies            = new [] { new NuSpecDependency() { Id = "Wave", Version = waveVersion } }
+									 Dependencies            = new [] { new NuSpecDependency() { Id = "Wave", Version = waveVersion } },
+									 ReleaseNotes            = new [] { "Changelog: https://github.com/olsh/resharper-bootstrap-templates/releases" }
                                  };
 
      NuGetPack(nuGetPackSettings);
