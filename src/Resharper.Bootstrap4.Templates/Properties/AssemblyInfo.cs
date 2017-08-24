@@ -6,6 +6,6 @@
 using System.Reflection;
 
 [assembly: AssemblyTitle("Resharper.Bootstrap4.Templates")]
-[assembly: AssemblyVersion("2017.1.2")]
-[assembly: AssemblyFileVersion("2017.1.2")]
+[assembly: AssemblyVersion("2017.2.0")]
+[assembly: AssemblyFileVersion("2017.2.0")]
 

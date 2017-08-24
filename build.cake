@@ -1,11 +1,8 @@
-#addin "Cake.ExtendedNuGet"
-#addin "nuget:?package=NuGet.Core&version=2.8.6"
-
 var target = Argument("target", "Default");
 var bootstrapVersion = Argument("bootstrap", "3");
 var buildConfiguration = Argument("buildConfig", "Debug");
-var extensionsVersion = Argument("version", "2017.1.2");
-var waveVersion = Argument("wave", "[8.0]");
+var extensionsVersion = Argument("version", "2017.2.0");
+var waveVersion = Argument("wave", "[9.0]");
 
 Task("AppendBuildNumber")
   .WithCriteria(BuildSystem.AppVeyor.IsRunningOnAppVeyor)
@@ -105,7 +102,7 @@ Task("NugetPack")
                                      Files                   = files,
                                      OutputDirectory         = ".",
 									 Dependencies            = new [] { new NuSpecDependency() { Id = "Wave", Version = waveVersion } },
-									 ReleaseNotes            = new [] { "Changelog: https://github.com/olsh/resharper-bootstrap-templates/releases" }
+									 ReleaseNotes            = new [] { "https://github.com/olsh/resharper-bootstrap-templates/releases" }
                                  };
 
      NuGetPack(nuGetPackSettings);
