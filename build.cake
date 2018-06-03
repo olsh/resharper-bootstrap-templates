@@ -1,7 +1,7 @@
 var target = Argument("target", "Default");
 var bootstrapVersion = Argument("bootstrap", "3");
 var buildConfiguration = Argument("buildConfig", "Debug");
-var extensionsVersion = Argument("version", "2018.1.0");
+var extensionsVersion = Argument("version", "2018.1.2");
 var waveVersion = Argument("wave", "[12.0, 13.0)");
 
 Task("AppendBuildNumber")
