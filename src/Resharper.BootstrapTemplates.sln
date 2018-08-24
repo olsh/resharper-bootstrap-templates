@@ -1,15 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resharper.Bootstrap3.Templates", "Resharper.Bootstrap3.Templates\Resharper.Bootstrap3.Templates.csproj", "{B1B2441D-DA96-4B84-B9FA-5017B2442205}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Resharper.Bootstrap3.Templates", "Resharper.Bootstrap3.Templates\Resharper.Bootstrap3.Templates.csproj", "{B1B2441D-DA96-4B84-B9FA-5017B2442205}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resharper.Bootstrap4.Templates", "Resharper.Bootstrap4.Templates\Resharper.Bootstrap4.Templates.csproj", "{C8EAF09B-F10B-486C-98B3-71E62C7B4650}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Resharper.Bootstrap4.Templates", "Resharper.Bootstrap4.Templates\Resharper.Bootstrap4.Templates.csproj", "{C8EAF09B-F10B-486C-98B3-71E62C7B4650}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{C61818CE-4EA9-4221-A083-09EEF31B2C3D}"
 	ProjectSection(SolutionItems) = preProject
+		..\appveyor.yml = ..\appveyor.yml
 		..\build.cake = ..\build.cake
+		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
 Global
@@ -29,5 +31,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {850167B0-E4BE-4E48-A7F0-5CE394C80A2E}
 	EndGlobalSection
 EndGlobal

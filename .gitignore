@@ -252,4 +252,3 @@ paket-files/
 templates.dotSettings
 
 tools/*
-!tools/packages.config

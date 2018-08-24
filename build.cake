@@ -1,8 +1,8 @@
 var target = Argument("target", "Default");
-var bootstrapVersion = Argument("bootstrap", "3");
+var bootstrapVersion = Argument("bootstrapVersion", "3");
 var buildConfiguration = Argument("buildConfig", "Debug");
-var extensionsVersion = Argument("version", "2018.1.2");
-var waveVersion = Argument("wave", "[12.0, 13.0)");
+var extensionsVersion = Argument("version", "2018.2.0");
+var waveVersion = Argument("wave", "[182.0.0, 183.0.0)");
 
 Task("AppendBuildNumber")
   .WithCriteria(BuildSystem.AppVeyor.IsRunningOnAppVeyor)
@@ -27,7 +27,7 @@ Task("CompileTemplates")
 		StartProcess("rstc/rstc.exe", string.Format("compile -i templates/bs{0}/*.md -o templates/bs{0}/templates.dotSettings -r templates/bs{0}/README.md", 
 			bootstrapVersion));
 
-	if (exitCodeWithArgument != 0) 
+    if (exitCodeWithArgument != 0) 
 	{
 		throw new Exception(string.Format("Template compilation fail. Code {0}", exitCodeWithArgument));
 	}
@@ -39,23 +39,8 @@ Task("NugetRestore")
 	NuGetRestore("src/Resharper.BootstrapTemplates.sln");
 });
 
-Task("UpdateAssemblyVersion")
-  .IsDependentOn("AppendBuildNumber")
-  .Does(() =>
-{
-	var assemblyFile = string.Format("src/Resharper.Bootstrap{0}.Templates/Properties/AssemblyInfo.cs", bootstrapVersion);
-
-	AssemblyInfoSettings assemblySettings = new AssemblyInfoSettings();
-	assemblySettings.Title = string.Format("Resharper.Bootstrap{0}.Templates", bootstrapVersion);
-	assemblySettings.FileVersion = extensionsVersion;
-	assemblySettings.Version = extensionsVersion;
-
-	CreateAssemblyInfo(assemblyFile, assemblySettings);
-});
-
 Task("Build")
   .IsDependentOn("NugetRestore")
-  .IsDependentOn("UpdateAssemblyVersion")
   .Does(() =>
 {
 	MSBuild(string.Format("src/Resharper.Bootstrap{0}.Templates/Resharper.Bootstrap{0}.Templates.csproj", bootstrapVersion), new MSBuildSettings {
