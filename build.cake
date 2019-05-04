@@ -1,8 +1,8 @@
 var target = Argument("target", "Default");
 var bootstrapVersion = Argument("bootstrapVersion", "3");
 var buildConfiguration = Argument("buildConfig", "Debug");
-var extensionsVersion = Argument("version", "2018.3.0");
-var waveVersion = Argument("wave", "[183.0.0, 184.0.0)");
+var extensionsVersion = Argument("version", "2019.1.1");
+var waveVersion = Argument("wave", "[191.0, 192.0)");
 
 Task("AppendBuildNumber")
   .WithCriteria(BuildSystem.AppVeyor.IsRunningOnAppVeyor)

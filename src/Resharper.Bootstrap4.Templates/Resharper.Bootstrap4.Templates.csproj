@@ -2,7 +2,7 @@
   <PropertyGroup>
     <ReSharperVersionIdentifier>20172</ReSharperVersionIdentifier>
     <TargetFramework>net461</TargetFramework>
-    <VersionPrefix>2018.2.0</VersionPrefix>
+    <VersionPrefix>2019.1.0</VersionPrefix>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
   <ItemGroup>
