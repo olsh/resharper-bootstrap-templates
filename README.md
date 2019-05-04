@@ -14,5 +14,5 @@ You can find the full list of the templates here [Bootstrap 3](templates/bs3/) a
 Look for `Bootstrap Live Templates` in `ReSharper -> Extension manager`.  
 
 ## ReSharper Gallery
-[Bootstrap 3](https://resharper-plugins.jetbrains.com/packages/Bootstrap3.LiveTemplates/)  
-[Bootstrap 4](https://resharper-plugins.jetbrains.com/packages/Bootstrap4.LiveTemplates/)
+[Bootstrap 3](https://plugins.jetbrains.com/plugin/11658-bootstrap-3-live-templates)  
+[Bootstrap 4](https://plugins.jetbrains.com/plugin/11678-bootstrap-4-live-templates)
