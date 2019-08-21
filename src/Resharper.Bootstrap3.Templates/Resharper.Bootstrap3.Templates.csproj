@@ -6,9 +6,6 @@
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="JetBrains.ReSharper.SDK" Version="2019.1.1">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
-    </PackageReference>
+    <PackageReference Include="JetBrains.ReSharper.SDK" Version="2019.1.2" />
   </ItemGroup>
 </Project>
