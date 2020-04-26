@@ -1,8 +1,8 @@
 var target = Argument("target", "Default");
 var bootstrapVersion = Argument("bootstrapVersion", "3");
 var buildConfiguration = Argument("buildConfig", "Debug");
-var extensionsVersion = Argument("version", "2019.3.0");
-var waveVersion = Argument("wave", "[193.0, 194.0)");
+var extensionsVersion = Argument("version", "2020.1.0");
+var waveVersion = Argument("wave", "[201.0, 202.0)");
 
 Task("AppendBuildNumber")
   .WithCriteria(BuildSystem.AppVeyor.IsRunningOnAppVeyor)
@@ -80,7 +80,7 @@ Task("NugetPack")
                                      ProjectUrl              = new Uri("https://github.com/olsh/resharper-bootstrap-templates"),
                                      IconUrl                 = new Uri("https://raw.githubusercontent.com/olsh/resharper-bootstrap-templates/master/images/bootstrap3-logo.png"),
                                      LicenseUrl              = new Uri("https://github.com/olsh/resharper-bootstrap-templates/raw/master/LICENSE"),
-                                     Tags                    = new [] {"resharper", string.Format("bootstrap{0}", bootstrapVersion), "templates"},
+                                     Tags                    = new [] {"resharper", "bootstrap", string.Format("bootstrap{0}", bootstrapVersion), "templates"},
                                      RequireLicenseAcceptance= false,
                                      Symbols                 = false,
                                      NoPackageAnalysis       = true,
