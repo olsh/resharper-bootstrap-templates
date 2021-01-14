@@ -4,6 +4,6 @@
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="JetBrains.ReSharper.SDK" Version="2020.2.4" />
+    <PackageReference Include="JetBrains.ReSharper.SDK" Version="2020.3.2" />
   </ItemGroup>
 </Project>
