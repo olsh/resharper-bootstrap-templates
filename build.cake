@@ -1,8 +1,14 @@
 var target = Argument("target", "Default");
 var bootstrapVersion = Argument("bootstrapVersion", "3");
 var buildConfiguration = Argument("buildConfig", "Debug");
-var extensionsVersion = Argument("version", "2020.2.0");
-var waveVersion = Argument("wave", "[202.0, 203.0)");
+var projectPath = string.Format("src/Resharper.Bootstrap{0}.Templates/Resharper.Bootstrap{0}.Templates.csproj", bootstrapVersion);
+var sdkVersion = XmlPeek(projectPath, "//PackageReference[@Include='JetBrains.ReSharper.SDK']/@Version");
+Information($"Detected SDK {sdkVersion} version for project {projectPath}");
+
+var extensionsVersion = sdkVersion;
+var sdkMatch = System.Text.RegularExpressions.Regex.Match(sdkVersion, @"\d{2}(\d{2}).(\d).*");
+var waveMajorVersion = int.Parse(sdkMatch.Groups[1].Value + sdkMatch.Groups[2].Value);
+var waveVersion = Argument("wave", $"[{waveMajorVersion}.0, {waveMajorVersion + 1}.0)");
 
 Task("AppendBuildNumber")
   .WithCriteria(BuildSystem.AppVeyor.IsRunningOnAppVeyor)
@@ -43,9 +49,11 @@ Task("Build")
   .IsDependentOn("NugetRestore")
   .Does(() =>
 {
-	MSBuild(string.Format("src/Resharper.Bootstrap{0}.Templates/Resharper.Bootstrap{0}.Templates.csproj", bootstrapVersion), new MSBuildSettings {
+	MSBuild(projectPath, new MSBuildSettings {
 		Verbosity = Verbosity.Minimal,
-		Configuration = buildConfiguration
+		Configuration = buildConfiguration,
+        ArgumentCustomization = args => args
+                                    .Append($"/p:VersionPrefix={extensionsVersion}")
     });
 });
 

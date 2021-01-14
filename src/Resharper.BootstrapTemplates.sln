@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2003
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Resharper.Bootstrap3.Templates", "Resharper.Bootstrap3.Templates\Resharper.Bootstrap3.Templates.csproj", "{B1B2441D-DA96-4B84-B9FA-5017B2442205}"
 EndProject
@@ -9,6 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Resharper.Bootstrap4.Templa
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{C61818CE-4EA9-4221-A083-09EEF31B2C3D}"
 	ProjectSection(SolutionItems) = preProject
+		..\.editorconfig = ..\.editorconfig
 		..\appveyor.yml = ..\appveyor.yml
 		..\build.cake = ..\build.cake
 		..\README.md = ..\README.md
