@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace></RootNamespace>
+    <NoWarn>CS0649;CS0169</NoWarn>
+    <NukeRootDirectory>..</NukeRootDirectory>
+    <NukeScriptDirectory>..</NukeScriptDirectory>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Nuke.Common" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageDownload Include="NuGet.CommandLine" Version="[5.8.1]" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="..\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="..\build.cmd" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="..\build.ps1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="..\build.sh" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="..\build.sh" />
+  </ItemGroup>
+
+</Project>

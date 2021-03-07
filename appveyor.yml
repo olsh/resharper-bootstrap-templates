@@ -1,15 +1,11 @@
 image: Visual Studio 2019
-install:
-  - dotnet tool install -g Cake.Tool --version 0.37.0 
 build_script:
 - cmd: >-
 
-    dotnet cake -Target=UpdateBuildVersion
+    build.cmd --target Compile
 
-    dotnet cake -Target=CreateArtifact -bootstrapVersion=3 -buildConfig=Release
+    build.cmd --target UploadArtifact --bootstrapVersion 3 --configuration Release
 
-    dotnet cake -Target=CreateArtifact -bootstrapVersion=4 -buildConfig=Release
+    build.cmd --target UploadArtifact --bootstrapVersion 4 --configuration Release
     
 test: off
-cache:
-  - 'tools -> build.cake'

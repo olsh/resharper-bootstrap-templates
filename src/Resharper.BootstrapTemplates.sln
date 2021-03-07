@@ -10,8 +10,14 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{C61818CE-4EA9-4221-A083-09EEF31B2C3D}"
 	ProjectSection(SolutionItems) = preProject
 		..\.editorconfig = ..\.editorconfig
-		..\appveyor.yml = ..\appveyor.yml
-		..\build.cake = ..\build.cake
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_build", "..\build\_build.csproj", "{07B85C54-4DA5-479A-8353-A85EA122BCD6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{352C50DE-75BA-45CE-845D-0A96A9B99483}"
+	ProjectSection(SolutionItems) = preProject
+		..\.editorconfig = ..\.editorconfig
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
@@ -29,9 +35,14 @@ Global
 		{C8EAF09B-F10B-486C-98B3-71E62C7B4650}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8EAF09B-F10B-486C-98B3-71E62C7B4650}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8EAF09B-F10B-486C-98B3-71E62C7B4650}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07B85C54-4DA5-479A-8353-A85EA122BCD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07B85C54-4DA5-479A-8353-A85EA122BCD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{07B85C54-4DA5-479A-8353-A85EA122BCD6} = {C61818CE-4EA9-4221-A083-09EEF31B2C3D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {850167B0-E4BE-4E48-A7F0-5CE394C80A2E}

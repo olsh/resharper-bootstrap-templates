@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+    <metadata>
+        <id>Bootstrap$bootstrapVersion$.LiveTemplates</id>
+        <version>1.0.0</version>
+        <title>Bootstrap $bootstrapVersion$ Live Templates</title>
+        <authors>Oleg Shevchenko</authors>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <license type="expression">MIT</license>
+        <projectUrl>https://github.com/olsh/resharper-bootstrap-templates</projectUrl>
+        <iconUrl>https://raw.githubusercontent.com/olsh/resharper-bootstrap-templates/master/images/bootstrap3-logo.png</iconUrl>
+        <description>Bootstrap $bootstrapVersion$ Live Templates for quick markup generation</description>
+        <releaseNotes>https://github.com/olsh/resharper-bootstrap-templates/releases</releaseNotes>
+        <tags>resharper bootstrap bootstrap$bootstrapVersion$ templates</tags>
+        <dependencies>
+            <dependency id="Wave" version="$waveVersion$" />
+        </dependencies>
+    </metadata>
+
+    <files>
+        <file src="Resharper.Bootstrap$bootstrapVersion$.Templates.dll" target="dotFiles" />
+        <file src="Resharper.Bootstrap$bootstrapVersion$.Templates.pdb" target="dotFiles" />
+        <file src="templates.dotSettings" target="DotFiles/Extensions/Bootstrap$bootstrapVersion$.LiveTemplates/settings" />
+    </files>
+</package>
