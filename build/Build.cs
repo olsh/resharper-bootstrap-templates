@@ -12,6 +12,7 @@ using Nuke.Common.Tools.NuGet;
 
 using static Nuke.Common.IO.XmlTasks;
 using static Nuke.Common.Tools.DotNet.DotNetTasks;
+using static Nuke.Common.Tools.NuGet.NuGetTasks;
 
 [CheckBuildProjectConfigurations]
 [ShutdownDotNetAfterServerBuild]
@@ -31,6 +32,9 @@ class Build : NukeBuild
     }
 
     public static int Main () => Execute<Build>(x => x.Pack);
+
+    [CI]
+    readonly AppVeyor AppVeyor;
 
     [Parameter]
     readonly string Configuration = "Release";
@@ -56,19 +60,21 @@ class Build : NukeBuild
     string WaveVersionsRange { get; }
 
     Target AppendBuildNumber => _ => _
-        .Requires(() => Host == HostType.AppVeyor)
+        .Requires(() => AppVeyor != null)
         .Executes(() =>
         {
-            ExtensionVersion = $"{ExtensionVersion}.{AppVeyor.Instance.BuildNumber}";
+            ExtensionVersion = $"{ExtensionVersion}.{AppVeyor.BuildNumber}";
         });
 
     Target UpdateBuildVersion => _ => _
-        .Requires(() => Host == HostType.AppVeyor)
+        .Requires(() => AppVeyor != null)
         .DependsOn(AppendBuildNumber)
         .Executes(() =>
         {
             AppVeyor.Instance.UpdateBuildVersion(ExtensionVersion);
         });
+
+    [LocalExecutable("./rstc/rstc.exe")] readonly Tool Rstc;
 
     Target CompileTemplates => _ => _
         .Executes(() =>
@@ -77,12 +83,7 @@ class Build : NukeBuild
             var templatesInput = RootDirectory.GetRelativePathTo(templatesPath / "*.md");
             var templatesOutput = RootDirectory.GetRelativePathTo(OutputDirectory / "templates.dotSettings");
             var templatesReadme = RootDirectory.GetRelativePathTo(templatesPath / "README.md");
-            var process = ProcessTasks.StartProcess(
-                RootDirectory / "rstc" / "rstc.exe",
-                $"compile -i {templatesInput} -o {templatesOutput} -r {templatesReadme}",
-                RootDirectory);
-
-            process.AssertZeroExitCode();
+            Rstc($"compile -i {templatesInput} -o {templatesOutput} -r {templatesReadme}");
         });
 
     Target Restore => _ => _
@@ -109,7 +110,7 @@ class Build : NukeBuild
         .DependsOn(Compile, CompileTemplates)
         .Executes(() =>
         {
-            NuGetTasks.NuGetPack(s => s
+            NuGetPack(s => s
                 .SetTargetPath(BuildProjectDirectory / "Resharper.Bootstrap.Templates.nuspec")
                 .SetVersion(ExtensionVersion)
                 .SetBasePath(OutputDirectory)
@@ -120,9 +121,9 @@ class Build : NukeBuild
 
     Target UploadArtifact => _ => _
         .DependsOn(Pack)
-        .Requires(() => Host == HostType.AppVeyor)
+        .Requires(() => AppVeyor != null)
         .Executes(() =>
         {
-            AppVeyor.Instance.PushArtifact($"Bootstrap{BootstrapVersion}.LiveTemplates.{ExtensionVersion}.nupkg");
+            AppVeyor.PushArtifact($"Bootstrap{BootstrapVersion}.LiveTemplates.{ExtensionVersion}.nupkg");
         });
 }
