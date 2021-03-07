@@ -17,24 +17,4 @@
     <PackageDownload Include="NuGet.CommandLine" Version="[5.8.1]" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Remove="..\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="..\build.cmd" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="..\build.ps1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="..\build.sh" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="..\build.sh" />
-  </ItemGroup>
-
 </Project>
