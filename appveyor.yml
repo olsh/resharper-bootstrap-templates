@@ -2,7 +2,7 @@ image: Visual Studio 2019
 build_script:
 - cmd: >-
 
-    build.cmd --target Compile
+    build.cmd --target UpdateBuildVersion
 
     build.cmd --target UploadArtifact --bootstrapVersion 3 --configuration Release
 
