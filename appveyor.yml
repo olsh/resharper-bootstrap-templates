@@ -1,4 +1,10 @@
 image: Visual Studio 2019
+    
+skip_branch_with_pr: true
+skip_tags: true
+
+test: off
+
 build_script:
 - cmd: >-
 
@@ -7,5 +13,3 @@ build_script:
     build.cmd --target UploadArtifact --bootstrapVersion 3 --configuration Release
 
     build.cmd --target UploadArtifact --bootstrapVersion 4 --configuration Release
-    
-test: off
