@@ -252,3 +252,6 @@ paket-files/
 templates.dotSettings
 
 tools/*
+
+# Nuke temp files
+.nuke/temp

@@ -18,20 +18,22 @@ using static Nuke.Common.Tools.NuGet.NuGetTasks;
 [ShutdownDotNetAfterServerBuild]
 class Build : NukeBuild
 {
-    public Build()
-    {
-        SdkVersion = XmlPeekSingle(
-            SourceDirectory / $"Resharper.Bootstrap{BootstrapVersion}.Templates" / $"Resharper.Bootstrap{BootstrapVersion}.Templates.csproj",
-            "//PackageReference[@Include='JetBrains.ReSharper.SDK']/@Version");
-        SdkVersion.NotNull("Unable to detect SDK version");
+    public static int Main () => Execute<Build>(x => x.Pack);
 
-        ExtensionVersion = SdkVersion;
-        var sdkMatch = Regex.Match(SdkVersion, @"\d{2}(\d{2}).(\d).*");
+    protected override void OnBuildInitialized()
+    {
+        var sdkVersion = XmlPeekSingle(
+            Project.Path,
+            "//PackageReference[@Include='JetBrains.ReSharper.SDK']/@Version");
+        sdkVersion.NotNull("Unable to detect SDK version");
+
+        ExtensionVersion = AppVeyor == null ? sdkVersion : $"{sdkVersion}.{AppVeyor.BuildNumber}";
+        var sdkMatch = Regex.Match(sdkVersion, @"\d{2}(\d{2}).(\d).*");
         var waveMajorVersion = int.Parse(sdkMatch.Groups[1].Value + sdkMatch.Groups[2].Value);
         WaveVersionsRange = $"[{waveMajorVersion}.0, {waveMajorVersion + 1}.0)";
-    }
 
-    public static int Main () => Execute<Build>(x => x.Pack);
+        base.OnBuildInitialized();
+    }
 
     [CI]
     readonly AppVeyor AppVeyor;
@@ -53,22 +55,12 @@ class Build : NukeBuild
 
     AbsolutePath SourceDirectory => RootDirectory / "src";
 
-    string SdkVersion { get; }
-
     string ExtensionVersion { get; set; }
 
-    string WaveVersionsRange { get; }
-
-    Target AppendBuildNumber => _ => _
-        .Requires(() => AppVeyor != null)
-        .Executes(() =>
-        {
-            ExtensionVersion = $"{ExtensionVersion}.{AppVeyor.BuildNumber}";
-        });
+    string WaveVersionsRange { get; set; }
 
     Target UpdateBuildVersion => _ => _
-        .Requires(() => AppVeyor != null)
-        .DependsOn(AppendBuildNumber)
+        .Requires(() => AppVeyor)
         .Executes(() =>
         {
             AppVeyor.Instance.UpdateBuildVersion(ExtensionVersion);
@@ -95,7 +87,6 @@ class Build : NukeBuild
 
     Target Compile => _ => _
         .DependsOn(Restore)
-        .After(AppendBuildNumber)
         .Executes(() =>
         {
             DotNetBuild(s => s
@@ -121,7 +112,7 @@ class Build : NukeBuild
 
     Target UploadArtifact => _ => _
         .DependsOn(Pack)
-        .Requires(() => AppVeyor != null)
+        .Requires(() => AppVeyor)
         .Executes(() =>
         {
             AppVeyor.PushArtifact($"Bootstrap{BootstrapVersion}.LiveTemplates.{ExtensionVersion}.nupkg");
