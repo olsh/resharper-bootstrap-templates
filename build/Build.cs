@@ -53,8 +53,6 @@ class Build : NukeBuild
 
     AbsolutePath OutputDirectory => Project.Directory / "bin" / Configuration;
 
-    AbsolutePath SourceDirectory => RootDirectory / "src";
-
     string ExtensionVersion { get; set; }
 
     string WaveVersionsRange { get; set; }
