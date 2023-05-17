@@ -1,5 +1,5 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
-    <PackageReference Include="JetBrains.ReSharper.SDK" Version="2023.1.0" />
+    <PackageReference Include="JetBrains.ReSharper.SDK" Version="2023.1.2" />
   </ItemGroup>
 </Project>
