@@ -28,7 +28,7 @@ class Build : NukeBuild
         ExtensionVersion = AppVeyor == null ? sdkVersion : $"{sdkVersion}.{AppVeyor.BuildNumber}";
         var sdkMatch = Regex.Match(sdkVersion, @"\d{2}(\d{2}).(\d).*");
         var waveMajorVersion = int.Parse(sdkMatch.Groups[1].Value + sdkMatch.Groups[2].Value);
-        WaveVersionsRange = $"[{waveMajorVersion}.0, {waveMajorVersion + 1}.0)";
+        WaveVersionsRange = $"{waveMajorVersion}.0";
 
         base.OnBuildInitialized();
     }
@@ -62,7 +62,7 @@ class Build : NukeBuild
             AppVeyor.Instance.UpdateBuildVersion(ExtensionVersion);
         });
 
-    [LocalExecutable("./rstc/rstc.exe")] readonly Tool Rstc;
+    [LocalPath("./rstc/rstc.exe")] readonly Tool Rstc;
 
     Target CompileTemplates => _ => _
         .Executes(() =>
